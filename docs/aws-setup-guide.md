@@ -180,7 +180,7 @@ Add this configuration block:
 # SSH over Session Manager
 host i-* mi-*
   IdentityFile ~/.ssh/id_rsa
-  ProxyCommand ~/.ssh/aws-ssm-ec2-proxy-command.sh %h %r %p ~/.ssh/id_rsa.pub
+  ProxyCommand ~/.ssh/aws-ssm-ssh-proxy-command.sh %h %r %p ~/.ssh/id_rsa.pub
   StrictHostKeyChecking no
 ```
 
@@ -202,6 +202,14 @@ ssh ec2-user@i-1234567890abcdef0
 scp -r ./my-local-dir ec2-user@i-1234567890abcdef0:/var/www/html
 
 rsync -av ./my-local-dir/ ec2-user@i-1234567890abcdef0:/var/www/html
+```
+
+## Optional: Using `sftp` with SSH-over-SSM
+
+Although `sftp` is not officially supported over SSM in graphical clients (e.g., FileZilla, Cyberduck), you can use it via the command line:
+
+```bash
+sftp ec2-user@i-1234567890abcdef0
 ```
 
 ## Step 6: Security Best Practices
