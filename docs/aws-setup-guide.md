@@ -186,7 +186,7 @@ host i-* mi-*
 
 ### Additional notes
 
-Ensure AWS CLI environemnt variables are set properly if you use different profile than default
+Ensure AWS CLI environment variables are set properly if you use different profile than default
     export AWS_PROFILE=yourprofile
 
 
@@ -212,7 +212,7 @@ Although `sftp` is not officially supported over SSM in graphical clients (e.g.,
 sftp ec2-user@i-1234567890abcdef0
 ```
 
-## Step 6: Security Best Practices
+## Step 7: Security Best Practices
 
 ### Set Proper File Permissions
 
