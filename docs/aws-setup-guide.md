@@ -186,9 +186,10 @@ host i-* mi-*
 
 ### Additional notes
 
-Ensure AWS CLI environment variables are set properly if you use different profile than default
-    export AWS_PROFILE=yourprofile
-
+Ensure AWS CLI environment variables are set properly if you use different profile than **default**:
+```
+export AWS_PROFILE=yourprofile
+```
 
 ## Step 6: Test the Configuration
 (Replace "i-1234567890abcdef0" with actual instance ID)
